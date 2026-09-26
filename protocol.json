@@ -1,0 +1,35 @@
+{
+  "method": "KIM",
+  "operator_count": 16,
+  "backbone": "Qwen/Qwen2.5-3B-Instruct",
+  "memory_trajectories": 3609,
+  "memory_states": 8594,
+  "rank": 4,
+  "key_dimension": 64,
+  "alpha": 8,
+  "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+  "target_last_layers": 4,
+  "generation": {
+    "protocol": "toolstar_unified_recoverable_v1",
+    "max_new_tokens_per_round": 16384,
+    "max_context_tokens": 32768,
+    "max_tool_calls": 4,
+    "search_top_n": 3,
+    "state_max_length": 4096,
+    "dtype": "bfloat16",
+    "seed": 20260725,
+    "answer_field": "Output"
+  },
+  "judging": {
+    "model": "Qwen/Qwen3-30B-A3B",
+    "protocol": "qwen3_30b_a3b_reference_comparison_v3",
+    "dtype": "bfloat16",
+    "do_sample": false,
+    "enable_thinking": false,
+    "batch_size": 1,
+    "max_new_tokens": 128,
+    "invalid_retry_max_new_tokens": 1024,
+    "missing_answer_verdict": "incorrect"
+  },
+  "aggregation": "Equal weight per dataset; three mathematics and four QA datasets."
+}

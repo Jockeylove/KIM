@@ -1,0 +1,4 @@
+# Only needed to run the GPU judge; summaries and unit tests use Python alone.
+torch>=2.6
+transformers>=4.56,<5
+accelerate>=1.0

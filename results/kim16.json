@@ -1,0 +1,55 @@
+{
+  "method": "KIM",
+  "operator_count": 16,
+  "backbone": "Qwen/Qwen2.5-3B-Instruct",
+  "judge_model": "Qwen/Qwen3-30B-A3B",
+  "judge_protocol": "qwen3_30b_a3b_reference_comparison_v3",
+  "datasets": [
+    {
+      "dataset": "gsm8k",
+      "count": 200,
+      "correct": 154,
+      "accuracy": 77.0
+    },
+    {
+      "dataset": "math500",
+      "count": 200,
+      "correct": 124,
+      "accuracy": 62.0
+    },
+    {
+      "dataset": "aime24",
+      "count": 30,
+      "correct": 5,
+      "accuracy": 16.666666666666668
+    },
+    {
+      "dataset": "hotpotqa",
+      "count": 200,
+      "correct": 87,
+      "accuracy": 43.5
+    },
+    {
+      "dataset": "2wiki",
+      "count": 200,
+      "correct": 77,
+      "accuracy": 38.5
+    },
+    {
+      "dataset": "musique",
+      "count": 200,
+      "correct": 36,
+      "accuracy": 18.0
+    },
+    {
+      "dataset": "bamboogle",
+      "count": 125,
+      "correct": 44,
+      "accuracy": 35.2
+    }
+  ],
+  "math_macro": 51.888888888888886,
+  "qa_macro": 33.8,
+  "macro": 41.55238095238095,
+  "question_count": 1155
+}
